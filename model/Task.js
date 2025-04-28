@@ -1,7 +1,8 @@
 const express = require("express");
 const sequelize = require("sequelize");
+const connection = require("../connection/connection");
 
-const Task = sequelize.define("Task", {
+const Task = connection.define("Task", {
     nome: {
         type: sequelize.STRING,
         allowNull: false

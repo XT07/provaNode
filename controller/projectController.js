@@ -10,7 +10,7 @@ rout.post("/project", (req, res) => {
         descricao: descricao,
         tarefas: tarefas || []
     }).then(() => {
-        res.status(200).send("Projeto criado com sucesso");
+        res.status(201).send("Projeto criado com sucesso");
     }).catch(err => {
         res.status(400).send(`Erro ao criar projeto | ${err}`);
     });

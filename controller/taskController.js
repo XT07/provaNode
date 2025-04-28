@@ -11,7 +11,7 @@ rout.post("/task", (req, res) => {
         responsavel: responsavel,
         projetoVinc: projetoVinc
     }).then(() => {
-        res.status(200).send("Tarefa criada com sucesso");
+        res.status(201).send("Tarefa criada com sucesso");
     }).catch(err => {
         res.status(400).send(`Erro ao criar tarefa | ${err}`);
     });

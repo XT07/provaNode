@@ -1,7 +1,8 @@
 const express = require("express");
 const sequelize = require("sequelize");
+const connection = require("../connection/connection");
 
-const Project = sequelize.define("Project", {
+const Project = connection.define("Project", {
     titulo: {
         type: sequelize.STRING,
         allowNull: false

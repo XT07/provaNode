@@ -46,7 +46,7 @@ rout.post("/register", async (req, res) => {
             nome: nome,
             senha: incripSenha
         }).then(() => {
-            res.status(200).send("Usuário criado com sucesso");
+            res.status(201).send("Usuário criado com sucesso");
         }).catch(err => {
             res.status(400).send(`Erro ao criar o usuário | ${err}`);
         });
